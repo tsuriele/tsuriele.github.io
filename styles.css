@@ -1,5 +1,5 @@
 html, body {
-    background: #E5E5E5;
+    background: #F6F6F6;
     height: 100%;
     display: flex;
     margin: 0;
@@ -40,17 +40,20 @@ a:hover:after {
 }
 
 a:hover {
-    color: #DA193D
+    color: #DA193D;
+    transition: color 250ms ease-in-out;
 }
 
 #container {
     max-width: 1280px;
-    display: flex;
     flex: 1;
     justify-content: center;
     align-content: center;
     align-items: center;
     padding: 0 50px;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 50% 50%;
 }
 
 #info {
@@ -73,9 +76,11 @@ a:hover {
     display: none;
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 923px) {
     #container {
         flex-direction: column;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
     }
 
     #bmMobile {
@@ -94,6 +99,8 @@ a:hover {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        justify-self: center;
+        align-self: end;
     }
 
     p, a {
