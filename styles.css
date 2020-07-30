@@ -1,0 +1,107 @@
+html, body {
+    background: #E5E5E5;
+    height: 100%;
+    display: flex;
+    margin: 0;
+    flex: 1;
+}
+
+p, a, a:visited, a:active {
+    font-family: Source Serif Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 41px;
+    letter-spacing: -0.7px;
+    color: #1E232A;
+    text-decoration: none;
+    margin: 0;
+}
+
+a {
+    border-bottom: 1px solid #1E232A;
+    position: relative;
+}
+
+a:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -1px;
+    right: 0;
+    border-bottom: solid 1px #DA193D;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    z-index: 2;
+}
+
+a:hover:after {
+    transform: scaleX(1);
+}
+
+a:hover {
+    color: #DA193D
+}
+
+#container {
+    max-width: 1280px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#info {
+    flex: 2;
+    min-width: 410px;
+}
+
+#bm {
+    flex: 1.5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#bm > svg, #bmMobile > svg {
+    width: 200px !important;
+    height: 200px !important;
+}
+
+#bmMobile {
+    display: none;
+}
+
+@media only screen and (max-width: 740px) {
+    #container {
+        flex-direction: column;
+    }
+
+    #bmMobile {
+        display: flex;
+        flex: 1.5;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #bm {
+        display: none;
+    }
+
+    #info {
+        min-width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    p, a {
+        font-family: Source Serif Pro;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: -0.7px;
+    }
+}
