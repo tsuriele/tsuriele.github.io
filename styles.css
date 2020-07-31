@@ -31,7 +31,7 @@ a:after {
     right: 0;
     border-bottom: solid 1px #DA193D;
     transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
+    transition: transform .4s ease-out;
     z-index: 2;
 }
 
@@ -41,7 +41,7 @@ a:hover:after {
 
 a:hover {
     color: #DA193D;
-    transition: color 250ms ease-in-out;
+    transition: color .25s ease-out;
 }
 
 #container {
@@ -49,21 +49,20 @@ a:hover {
     justify-content: center;
     align-content: center;
     align-items: center;
-    padding: 0 50px;
     display: grid;
     grid-template-rows: 100%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
 }
 
 #info {
-    flex: 2;
-    min-width: 410px;
+    grid-column-start: 3;
+    grid-column-end: span 3;
 }
 
 #bm {
-    flex: 1.5;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    grid-column-start: 2;
 }
 
 #bm > svg, #bmMobile > svg {
@@ -100,6 +99,7 @@ a:hover {
         justify-content: flex-end;
         justify-self: center;
         align-self: end;
+        grid-column-start: 1;
     }
 
     p, a {
